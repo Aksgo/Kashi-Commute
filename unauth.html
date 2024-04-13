@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unauthorized</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            border: 1.5px solid rgb(216, 216, 216);  
+            padding: 50px;
+            border-radius: 70px;
+        }
+
+        h1 {
+            margin-bottom: 0px;
+            font-size: 50px;
+            color: rgb(73, 73, 73);
+        }
+
+        .error-emoji {
+            font-size: 200px;
+            margin-bottom: 20px;
+        }
+        p{
+            color: red;
+        }
+        button{
+            border: 20px;
+            padding: 10px 30px;
+            color: white;
+            border-radius: 10px;
+            background-color: rgb(255, 22, 22);
+        }
+        button:hover{
+            background-color: rgb(0, 176, 59);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️401</h1>
+        <div class="error-emoji">😟</div>
+        <p>Oops! Unauthorized Access</p>
+        <button type="button" onclick="returnBack()">Back</button>
+    </div>
+    <script>
+        function returnBack(){
+            window.location.href="index.html";
+        }
+    </script>
+</body>
+</html>

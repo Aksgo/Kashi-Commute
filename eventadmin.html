@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="asset/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        max-width: 500px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <h1>Add Event Details</h1>
+    <label for="eventName">Event Name:</label><br>
+    <input type="text" id="eventName" name="eventName" placeholder="Enter event name"><br><br>
+    
+    <label for="startDate">Start Date:</label><br>
+    <input type="date" id="startDate" name="startDate"><br><br>
+    
+    <label for="endDate">End Date:</label><br>
+    <input type="date" id="endDate" name="endDate"><br><br>
+
+    <button id="event-submit">Submit</button>
+    <script src="eventadmin.js" type="module"></script>
+</body>
+</html>

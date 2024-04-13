@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="asset/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="userEvent.css">
+</head>
+<body>
+    <header class="text-center">
+        <h1>Kashi Commute</h1><hr>
+    </header>
+    <div class="displayAll">
+        <div class="displayEvent">
+            <label for="eventName" id="heading"><i>Your Events</i></label>
+            <ul class="events-list" id="event-list-all">
+                <div class="loader"></div>
+            </ul>
+            <p>Click on the events to remove</p>
+        </div>
+        <div class="container">
+            <label for="eventName" class="label">Event Name:</label>
+            <input type="text" id="eventName" name="eventName" class="input-field" required>
+
+            <label for="startDate" class="label">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" class="input-field" required>
+
+            <label for="endDate" class="label">End Date:</label>
+            <input type="date" id="endDate" name="endDate" class="input-field" required>
+
+            <label for="priority" class="label">Priority:</label>
+            <select id="priority" name="priority" placeholder="select">
+                <option value="high">High🔴</option>
+                <option value="medium">Medium🟡</option>
+                <option value="low">Low🟢</option>
+            </select>
+            <button type="submit" id="submitEvent">Add Event</button>
+            <button type="submit" id="back-btn">Back</button>
+        </div>
+    </div>
+    <footer>
+        <p>Made with ❣️ by <a href="https://github.com/aksgo" target="_blank" rel="noreferrer noopener">aksgo</a><br>
+        <p id="college">IIT Varanasi</p>
+    </footer>
+    <script src="userEvent.js" type="module"></script>
+</body>
+</html>

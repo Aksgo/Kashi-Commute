@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="asset/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Travel Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+</head>
+<body>
+    <header class="text-center">
+        <h1>Kashi Commute</h1><hr id="headerLine">
+    </header>
+    <main>
+        <div id="user-search-event">
+            <!-- Form for user input -->
+            <!-- <form id="travel-form" class="shadow-lg p-5"> -->
+            <div id="main-form" class = "search-train-form shadow-lg p-7">
+                <div id="userDetail"><img src="asset/person.jpg" alt="not available" id="user-img">
+                    <div id="userName"><!--user name from google account-->
+                    </div>
+                </div>
+                <hr>
+                <label for="departure">Departure Station:</label>
+                <input type="text" id="departure"
+                class="border border-gray-400 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500"
+                name="departure" required>
+                <label for="destination">Destination Station:</label>
+                <input type="text" id="destination"
+                class="border border-gray-400 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500"
+                name="destination" required>
+                <label for="date">Travel Date:</label>
+                <input type="date" id="date-travel"
+                class="border border-gray-400 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500"
+                name="date" required>
+                <div id="bottom-btn">
+                <button id="search-train-btn" class="bg-sky-500 hover:bg-sky-700 ">Search Trains</button>
+                <button id="add-user-event-btn" class="bg-sky-500 hover:bg-sky-700">Add Event</button>
+                <button id="signout-btn" class="bg-sky-500 hover:bg-sky-700">SignOut</button>
+                </div>
+            </div>
+            <!-- display event clashing -->
+            <div id="event"><span><b><i>Events:</i></b></span>
+                <ol id="event-result"><li>None</li></ol>
+                <!-- add li here -->
+                <!-- Personal events -->
+                <span id="personal-result-id"><b><i>Personal Tasks:</i></b></span>
+                <ol id="user-event-result"><li>None</li></ol>
+            </div>
+        </div>
+        <!-- Display train schedule results -->
+        <div id="schedule-train-un">
+            <h2>Trains Available:</h2>
+            <table id="schedule-result">
+                <thead>
+                    <tr>
+                        <th>Train Name</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>From Station</th>
+                        <th>To Station</th>
+                        <th>Duration(hr)</th>
+                    </tr>
+                </thead>
+                <tbody id="individualTrain">
+                    
+                    <!-- Results will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>Made with ❣️ by <a href="https://github.com/aksgo" target="_blank" rel="noreferrer noopener">aksgo</a><br>
+        <p id="college">IIT Varanasi</p>
+    </footer>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
