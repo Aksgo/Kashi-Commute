@@ -132,7 +132,7 @@ function addToEvent(data, curid, eventList){
     const eventid = data[0];
     let delb = document.createElement("li");
     delb.id="delete-btn";
-    delb.textContent="❌";
+    delb.textContent="🗑️";
     newEl.appendChild(delb);
     delb.addEventListener("click",()=>{
         let exactLocationInDB = ref(database, `${curid}/${eventid}`);
