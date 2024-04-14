@@ -47,7 +47,7 @@ main {
     margin: 0px auto;
     gap: 5px;
     flex-direction: column;
-    max-width: 320px;
+    max-width: 280px;
     padding : 20px;
     border-radius : 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Basic shadow */  
@@ -125,12 +125,18 @@ button {
 #user-search-event{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     padding : 20px;
     gap:30px;
-    max-width:1200px;
+    max-width:1000px;
     margin: 10px auto;
+    justify-content: center;
+    text-align: center; /* Align text content center */
 
+}
+#user-search-event > * {
+    flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+    width: auto; /* Set width to auto to prevent flex items from stretching */
 }
 #event{
     background-color: rgb(255, 255, 241);
@@ -140,7 +146,7 @@ button {
     margin: auto;
     text-align: center;
     max-width: 600px;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 #event-result, #user-event-result{
@@ -223,4 +229,40 @@ footer p, #college{
 footer a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 480px){
+    #event{
+        max-width: 250px;
+        }
+    li{
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #schedule-result th,
+    #schedule-result td {
+        padding: 8px; /* Further reduced padding for smaller screens */
+    }
+
+    /* Hide table header on smaller screens */
+    #schedule-result th {
+        display: none;
+    }
+
+    /* Set table rows to block display to stack them vertically */
+    #schedule-result tbody tr {
+        display: block;
+        margin-bottom: 20px; /* Add some space between table rows */
+        background-color: #ffffffec;
+    }
+
+    /* Set table cells to display as block to stack them vertically */
+    #schedule-result td {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+    }
 }

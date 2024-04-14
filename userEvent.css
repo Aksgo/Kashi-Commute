@@ -21,10 +21,12 @@ body {
     font-family: "Rubik", "sans-serif";
 }
 .displayAll{
+    justify-content: center;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
     gap : 20px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin : 40px auto;
     
 }
@@ -34,10 +36,11 @@ body {
     flex-direction: column;
     gap: 7px;
     margin:auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
     background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
 }
 .events-list {
     list-style-type: none;/*remove the bullet points*/
@@ -159,4 +162,13 @@ footer p, #college{
 footer a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 480px){
+.displayEvent{
+    max-width: 250px;
+    }
+#task-each{
+    overflow-y: hidden;
+}
 }
