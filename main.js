@@ -89,7 +89,7 @@ function displayInfo(curid){
         let curDate = new Date();
         console.log(curDate.getTime()<=date.getTime());
         console.log(curDate.getTime());
-        console.log(curDate.getTime());
+        console.log(date.getTime());
         if((departure.value.length>0 && destination.value.length>0) && date.getTime()>=curDate.getTime()){
             let key = prompt("Due to limited API Calls we need the key :");
             let refConfig = ref(database, "configuration");
