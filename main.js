@@ -87,6 +87,8 @@ function displayInfo(curid){
         let travelDate = document.getElementById("date-travel");
         let date = new Date(travelDate.value);
         let curDate = new Date();
+        date.setHours(0, 0, 0, 0); // Set time components to 0 for comparison
+        curDate.setHours(0, 0, 0, 0); // Set time components to 0 for comparison
         console.log(curDate.getTime()<=date.getTime());
         console.log(curDate.getTime());
         console.log(date.getTime());

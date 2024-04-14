@@ -64,6 +64,8 @@ function pushEventToDatabase(event,refDb){
     const eventPriority = document.getElementById("priority");
     let date1=new Date(startDate.value);
     let date2 = new Date(endDate.value);
+    date1.setHours(0, 0, 0, 0); // Set time components to 0 for comparison
+    date2.setHours(0, 0, 0, 0); // Set time components to 0 for comparison
     if((eventName.value.length>0 && startDate.value.length>0 && endDate.value.length>0 && eventPriority.value.length>0) && (date1.getTime()<=date2.getTime())){
       push(refDb,{
         "startDate":startDate.value,
@@ -71,11 +73,21 @@ function pushEventToDatabase(event,refDb){
         "endDate":endDate.value,
         "priority":eventPriority.value
       });
+      eventName.value="";
+      startDate.value="";
+      endDate.value="";
+      eventPriority.value="";
     }
-    eventName.value="";
-    startDate.value="";
-    endDate.value="";
-    eventPriority.value="";
+    else if(eventName.value.length>0 && startDate.value.length>0 && endDate.value.length>0 && eventPriority.value.length>0){window.alert("Oops! Start Date After End Date");
+      startDate.value="";
+      endDate.value="";
+    }
+    else if(eventPriority.value.length<=0){
+      window.alert("Please specify the priority");
+    }
+    else if(startDate.value.length<=0 || endDate.value.length<=0){window.alert("Please specify the date range");}
+    
+
   }
 let priorityType=["high","medium","low"];
 function displayAllUserEvent(snapshot,curid, ind1, ind2, ind3){
@@ -116,11 +128,13 @@ function addToEvent(data, curid, eventList){
     let newEl = document.createElement("li");
     let currentData=data[1];
     newEl.textContent = currentData.eventValue+" "+priorityTag[currentData.priority];
+    newEl.id="task-each";
     const eventid = data[0];
-    let delb = document.createElement("p");
+    let delb = document.createElement("li");
+    delb.id="delete-btn";
     delb.textContent="❌";
     newEl.appendChild(delb);
-    newEl.addEventListener("click",()=>{
+    delb.addEventListener("click",()=>{
         let exactLocationInDB = ref(database, `${curid}/${eventid}`);
         //console.log("removed : "+data[1]);
         remove(exactLocationInDB);
