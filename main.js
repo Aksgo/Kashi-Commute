@@ -60,7 +60,7 @@ auth.onAuthStateChanged((user)=>{
         let displayNameEl = document.createElement("b");
         let displayImg = document.getElementById("user-img");
         displayImg.src=userImg;
-        displayNameEl.textContent="Hello "+currentUserName+",";
+        displayNameEl.textContent="Hello "+currentUserName;
         let userName = document.getElementById("userName");
         userName.append(displayNameEl);
         let searchButton = document.getElementById("search-train-btn");

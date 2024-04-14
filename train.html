@@ -25,7 +25,11 @@
                     <div id="userName"><!--user name from google account-->
                     </div>
                 </div>
-                <hr>
+                <hr id="#user-line" style="
+                margin-left: 0px;
+                margin-right: 0px;
+                opacity: 20%;
+            ">
                 <label for="departure">From Station:</label>
                 <input type="text" id="departure"
                 class="border border-gray-400 rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500"
@@ -45,11 +49,11 @@
                 </div>
             </div>
             <!-- display event clashing -->
-            <div id="event"><span><b><i>College Events:</i></b></span>
+            <div id="event"><span class="event-heading"><b><i>College Events:</i></b></span>
                 <ol id="event-result"><li>None</li></ol>
                 <!-- add li here -->
                 <!-- Personal events -->
-                <span id="personal-result-id"><b><i>Personal Tasks:</i></b></span>
+                <span id="personal-result-id" class="event-heading"><b><i>Personal Tasks:</i></b></span>
                 <ol id="user-event-result"><li>None</li></ol>
                 <p id="disclaimer">Note: College Events are added by authority</p>
             </div>

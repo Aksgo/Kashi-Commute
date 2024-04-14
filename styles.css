@@ -45,18 +45,19 @@ main {
     margin-bottom: 20px;
     display: flex;
     margin: 0px auto;
+    gap: 5px;
     flex-direction: column;
     max-width: 320px;
     padding : 20px;
     border-radius : 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Basic shadow */  
-    background-color: #eef7fa;
+    background-color: #070707b0;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color:#494949
+    color:#ffffff
 }
 
 input[type="text"],
@@ -64,6 +65,7 @@ input[type="date"],
 button {
     margin-bottom: 15px;
 }
+
 
 #departure, #destination, #date-travel {
     font-size: 20px;
@@ -117,10 +119,9 @@ button {
 #userName{
     padding: 10px;
     margin: auto;
+    color: white;
 }
-#userLine{
-    color: black;
-}
+
 #user-search-event{
     display: flex;
     flex-direction: row;
