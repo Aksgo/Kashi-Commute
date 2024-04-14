@@ -117,7 +117,7 @@ function addToEvent(data, curid, eventList){
     let currentData=data[1];
     newEl.textContent = currentData.eventValue+" "+priorityTag[currentData.priority];
     const eventid = data[0];
-    let delb = document.createElement("delete-btn");
+    let delb = document.createElement("p");
     delb.textContent="❌";
     newEl.appendChild(document.createTextNode(delb));
     delb.addEventListener("click",()=>{
