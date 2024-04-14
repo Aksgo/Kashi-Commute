@@ -10,7 +10,7 @@ body {
     padding: 0;
     font-family: "Rubik", "sans-serif";
     background-color: #ffffff;
-    background-image:url(asset/bgkashi.png);
+    background-image:url(asset/bgkashib2.png);
 
 }
 /*
@@ -196,10 +196,10 @@ tbody{
     font-size: 15px;
 }
 #schedule-result tbody tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: #ffffffb6;
 }
 #schedule-result tbody tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: #ffffffb6;
 }
 
 #schedule-result tbody tr:hover {
