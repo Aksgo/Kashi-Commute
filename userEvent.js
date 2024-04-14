@@ -117,7 +117,10 @@ function addToEvent(data, curid, eventList){
     let currentData=data[1];
     newEl.textContent = currentData.eventValue+" "+priorityTag[currentData.priority];
     const eventid = data[0];
-    newEl.addEventListener("click",()=>{
+    let delb = document.createElement("delete-btn");
+    delb.textContent="❌";
+    newEl.appendChild(document.createTextNode(delb));
+    delb.addEventListener("click",()=>{
         let exactLocationInDB = ref(database, `${curid}/${eventid}`);
         //console.log("removed : "+data[1]);
         remove(exactLocationInDB);
