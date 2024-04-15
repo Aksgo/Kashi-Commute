@@ -212,8 +212,8 @@ function displayTrain(departure, destination, travelDate){
         let snap = snapshot.val();
         optionApi = snap["options"];
         //!!!!!!!!!!!!!!!!!!!!!!!!!enable this before submitting !!!!!!!!!!!!!!!!!!!
-        //let res = fetchData(url,optionApi);
-        let res = fetchData("sampleResponse.json");
+        let res = fetchData(url,optionApi);
+        //let res = fetchData("sampleResponse.json");
         res.then((response)=>{
             const tableBody = document.getElementById("individualTrain");
             const trainDisplay = document.getElementById("schedule-train-un");
