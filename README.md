@@ -37,6 +37,8 @@
             <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
         </section>
     </main>
+    ## Demo Video
+    [!Demo Video]("demo_video.mp4")
     <footer>
         <p>&copy; 2024 Kashi Commute. All rights reserved.</p>
     </footer>
