@@ -38,7 +38,7 @@
         </section>
     </main>
     ## Demo Video
-    [!Demo Video]("demo_video.mp4")
+    Please Download the raw file of demo_video.mp4
     <footer>
         <p>&copy; 2024 Kashi Commute. All rights reserved.</p>
     </footer>
