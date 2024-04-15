@@ -211,7 +211,7 @@ function displayTrain(departure, destination, travelDate){
         //console.log("running configuration fetching keys");
         let snap = snapshot.val();
         optionApi = snap["options"];
-        //!!!!!!!!!!!!!!!!!!!!!!!!!enable this before submitting !!!!!!!!!!!!!!!!!!!
+        //!!!!!!!!!!!!!!!!!!!!!!!!!enable this !!!!!!!!!!!!!!!!!!!
         let res = fetchData(url,optionApi);
         //let res = fetchData("sampleResponse.json");
         res.then((response)=>{
