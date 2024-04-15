@@ -26,15 +26,6 @@
             </ul>
         </section>
         <section>
-            <h2>Installation</h2>
-            <p>To install Kashi Commute locally, follow these steps:</p>
-            <ol>
-                <li>Clone the repository: <code>git clone https://github.com/yourusername/kashi-commute.git</code></li>
-                <li>Navigate to the project directory: <code>cd kashi-commute</code></li>
-                <li>Open index.html in your browser</li>
-            </ol>
-        </section>
-        <section>
             <h2>Usage</h2>
             <p>To use Kashi Commute, simply open the application in your web browser. Sign in with your college credentials to access personalized features.</p>
         </section>
@@ -48,7 +39,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Kashi Commute Team. All rights reserved.</p>
+        <p>&copy; 2024 Kashi Commute. All rights reserved.</p>
     </footer>
 </body>
 </html>
