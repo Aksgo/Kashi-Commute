@@ -47,23 +47,25 @@ main {
     margin: 0px auto;
     gap: 5px;
     flex-direction: column;
-    max-width: 280px;
+    max-width: 320px;
     padding : 20px;
     border-radius : 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Basic shadow */  
-    background-color: #070707b0;
+    background-color: rgba(7, 7, 7, 0.833); 
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color:#ffffff
+    color:#ffffff;
+    text-align: left;
 }
 
 input[type="text"],
 input[type="date"],
 button {
     margin-bottom: 15px;
+    color: #363636;
 }
 
 
@@ -92,16 +94,22 @@ button {
     border-radius: 5px;
     font-size: 17px;
     border:none;
-    padding: 10px;
+    padding: 12px;
     background-color: rgb(19, 141, 255);
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 0;
 }
-#search-train-btn:hover, #signout-btn:hover, #add-user-event-btn:hover{
+#signout-btn{
+    background-color: #001757;
+}
+#search-train-btn:hover, #add-user-event-btn:hover{
     background-color: rgb(13, 98, 176);
 }
 
-
+#signout-btn:hover{
+    background-color: #000000;
+}
 #userDetail{
     display: flex;
     flex-direction: row;
@@ -242,6 +250,9 @@ footer a{
 }
 
 @media screen and (max-width: 768px) {
+    .search-train-form{
+        max-width: 280px;
+    }
     #schedule-result th,
     #schedule-result td {
         padding: 8px; /* Further reduced padding for smaller screens */
